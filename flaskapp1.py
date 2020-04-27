@@ -27,7 +27,7 @@ def predict():
 
     output = prediction[0]
 
-    return render_template('webpage.html', prediction_text='Employee seems to be {}'.format(output))
+    return render_template('webpage.html', prediction_text='Employee seems to be: {}'.format(output))
 
 
 if __name__ == "__main__":
