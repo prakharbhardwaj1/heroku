@@ -14,7 +14,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template('webpage.html')
+    return render_template('resumeform.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -27,7 +27,7 @@ def predict():
 
     output = prediction[0]
 
-    return render_template('webpage.html', prediction_text='Employee seems to be: {}'.format(output))
+    return render_template('resumeform.html', prediction_text='Employee seems to be: {}'.format(output))
 
 
 if __name__ == "__main__":
